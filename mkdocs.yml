@@ -1,0 +1,5 @@
+site_name: PED
+
+nav:
+    - Home: Home.md
+    - Experiment: index.md
