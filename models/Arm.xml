@@ -1,0 +1,105 @@
+<spaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+<component id="Arm system">
+    <param name="theta1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="theta2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="theta3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="theta4" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="theta5" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="theta6" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="omega1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="omega2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="omega3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="omega4" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="omega5" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="omega6" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+
+    <param name="x1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="x2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="x3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="v1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="v2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+    <param name="v3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+
+    <param name="t_current" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+
+
+    <location id="1" name="fast_period1" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp; theta1' = omega1 &amp; omega1' = getAngAcc(1) &amp; theta2' = omega2 &amp;  omega2' = getAngAcc(2) &amp; theta3' = omega3 &amp; omega3' = getAngAcc(3) &amp; theta4' = omega4 &amp; omega4' = getAngAcc(4) &amp; theta5' = omega5 &amp; omega5' = getAngAcc(5)&amp; theta6' = omega6 &amp; omega6' = getAngAcc(6)</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="2" name="fast_period2" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp;theta1' = getOmega(1) &amp; theta2' = getOmega(2) &amp;  theta3' = getOmega(3)  &amp; theta4' = getOmega(4) &amp; theta5' = getOmega(5) &amp; theta6' = getOmega(6) </flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="3" name="fast_period3" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp;theta1' = omega1 &amp; omega1' = -getAngAcc(1) &amp; theta2' = omega2 &amp;  omega2' = -getAngAcc(2) &amp; theta3' = omega3 &amp; omega3' = -getAngAcc(3) &amp; theta4' = omega4 &amp; omega4' = -getAngAcc(4) &amp; theta5' = omega5 &amp; omega5' = -getAngAcc(5)&amp; theta6' = omega6 &amp; omega6' = -getAngAcc(6)</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="4" name="forward_period1" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp;x1' = v1 &amp; v1' = getAcc(1) &amp; x2' = v2 &amp; v2' = getAcc(2) &amp; x3' = v3 &amp; v3' = getAcc(3)</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="5" name="forward_period2" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp;x1' = getV(1) &amp; x2' = getV(2) &amp;x3' = getV(3)</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="6" name="forward_period3" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp;x1' = v1 &amp; v1' = -getAcc(1) &amp; x2' = v2 &amp; v2' = -getAcc(2) &amp; x3' = v3 &amp; v3' = -getAcc(3)</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="7" name="doorlike_period1" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp; x3' = getVmax()</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="8" name="doorlike_period2" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp;x1' = getVD(1) &amp; x2' = getVD(2) &amp;x3' = getVD(3)</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+    <location id="9" name="doorlike_period3" x="710" y="351" width="135.0" height="73.0">
+        <flow>t_current'=0.1 &amp; x3' = -getVmax()</flow>
+        <invariant> t_current&lt;=f_reverse(CurPos(),TarPos()) </invariant>
+    </location>
+
+
+
+
+
+    <transition source = "1",target = "2">
+    </transition>
+    <transition source = "2",target = "3">
+    </transition>
+    <transition source = "4",target = "5">
+    </transition>
+    <transition source = "5",target = "6">
+    </transition>
+    <transition source = "7",target = "8">
+    </transition>
+    <transition source = "8",target = "9">
+    </transition>
+    <transition source = "3",target = "1">
+    </transition>
+    <transition source = "3",target = "4">
+    </transition>
+    <transition source = "3",target = "7">
+    </transition>
+    <transition source = "6",target = "1">
+    </transition>
+    <transition source = "6",target = "4">
+    </transition>
+    <transition source = "6",target = "7">
+    </transition>
+    <transition source = "9",target = "1">
+    </transition>
+    <transition source = "9",target = "4">
+    </transition>
+    <transition source = "9",target = "7">
+    </transition>
+        </sspaceex>
