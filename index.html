@@ -42,11 +42,6 @@
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
                             <li class="nav-item">
                                 <a rel="prev" href="Home/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
@@ -90,6 +85,14 @@
             
             <li class="nav-item" data-level="1"><a href="#results" class="nav-link">Results</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#statistic-result" class="nav-link">Statistic result</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#video-result-on-robotic-arm-testbed" class="nav-link">Video result on robotic arm testbed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -97,7 +100,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="experiment">Experiment</h1>
+<div><h1 id="experiment">Experiment</h1>
 <h2 id="settings">Settings</h2>
 <p>We evaluate our PED method, both the global path-encoding-based strategy, PEDG, and decomposed path-encoding-based strategy, PEDD, on various compositional hybrid systems, all involving discontinuous behavior that cannot be solved by gradient-based methods. Our approach is implemented in Java and all the experiments are conducted on the same PC (Intel Core i7 2.30GHz, 32GB RAM, Windows 10).</p>
 <p>Our approach is evaluated on three different systems, the robotic arm systems(marked as Arm), quadcopter drone systems (marked as Drone), and three different vehicle systems, with respect to different scenarios of the straight road (Veh-a), crossroad (Veh-b), and T-junction (Veh-c). </p>
@@ -115,15 +118,16 @@
 <p>For example, <code>Drone.xml</code> gives the automaton of a quadcopter drone system and <code>Drone-2.cfg</code> gives the information of the second component in drone system.</p>
 <p>For each scenario, we set the number of components in the system as 1, 2, 3 and 5 respectively. For example, Arm-2 stands for the robotic arm system with first two components, <code>Arm-1.cfg</code> and <code>Arm-2.cfg</code> , while Drone-5 stands for the system with all five drones.</p>
 <h1 id="results">Results</h1>
+<h2 id="statistic-result">Statistic result</h2>
 <table class="tg">
 <thead>
   <tr>
     <th class="tg-9wq8">　</th>
     <th class="tg-9wq8" colspan="3">Success rate (%)</th>
-    <th class="tg-9wq8" colspan="3">Time&nbsp;&nbsp;&nbsp;cost (s)</th>
+    <th class="tg-9wq8" colspan="3">Time   cost (s)</th>
     <th class="tg-c3ow" colspan="2">Memory cost (MB)</th>
-    <th class="tg-9wq8" colspan="2">Simulation&nbsp;&nbsp;&nbsp;rounds</th>
-    <th class="tg-9wq8" colspan="3">Optimization&nbsp;&nbsp;&nbsp;value</th>
+    <th class="tg-9wq8" colspan="2">Simulation   rounds</th>
+    <th class="tg-9wq8" colspan="3">Optimization   value</th>
   </tr>
 </thead>
 <tbody>
@@ -144,7 +148,7 @@
     <td class="tg-9wq8">PEDD</td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Arm-1.zip">Arm-1</td>
+    <td class="tg-9wq8"><a href="../models/Arm-1.zip">Arm-1</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
@@ -160,7 +164,7 @@
     <td class="tg-9wq8">-9996.3 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Arm-2.zip">Arm-2</td>
+    <td class="tg-9wq8"><a href="../models/Arm-2.zip">Arm-2</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">98 </td>
     <td class="tg-uzvj">100 </td>
@@ -176,7 +180,7 @@
     <td class="tg-9wq8">-19989.6 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Arm-3.zip">Arm-3</td>
+    <td class="tg-9wq8"><a href="../models/Arm-3.zip">Arm-3</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">95 </td>
     <td class="tg-uzvj">100 </td>
@@ -192,7 +196,7 @@
     <td class="tg-9wq8">-29990.9 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Arm-5.zip">Arm-5</td>
+    <td class="tg-9wq8"><a href="../models/Arm-5.zip">Arm-5</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">93 </td>
     <td class="tg-uzvj">100 </td>
@@ -208,7 +212,7 @@
     <td class="tg-9wq8">-49989.6 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-a-1.zip">Veh-a-1</td>
+    <td class="tg-9wq8"><a href="../models/Veh-a-1.zip">Veh-a-1</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
@@ -224,7 +228,7 @@
     <td class="tg-9wq8">-9993.7 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-a-2.zip">Veh-a-2</td>
+    <td class="tg-9wq8"><a href="../models/Veh-a-2.zip">Veh-a-2</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-9wq8">99 </td>
     <td class="tg-uzvj">100 </td>
@@ -240,7 +244,7 @@
     <td class="tg-9wq8">-19995.4 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-a-3.zip">Veh-a-3</td>
+    <td class="tg-9wq8"><a href="../models/Veh-a-3.zip">Veh-a-3</a></td>
     <td class="tg-9wq8">19 </td>
     <td class="tg-9wq8">94 </td>
     <td class="tg-uzvj">96 </td>
@@ -256,7 +260,7 @@
     <td class="tg-9wq8">-29979.5 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-a-5.zip">Veh-a-5</td>
+    <td class="tg-9wq8"><a href="../models/Veh-a-5.zip">Veh-a-5</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">62 </td>
     <td class="tg-uzvj">74 </td>
@@ -272,7 +276,7 @@
     <td class="tg-9wq8">-49983.7 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-b-1.zip">Veh-b-1</td>
+    <td class="tg-9wq8"><a href="../models/Veh-b-1.zip">Veh-b-1</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
@@ -288,7 +292,7 @@
     <td class="tg-9wq8">-9995.3 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-b-2.zip">Veh-b-2</td>
+    <td class="tg-9wq8"><a href="../models/Veh-b-2.zip">Veh-b-2</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
@@ -304,7 +308,7 @@
     <td class="tg-9wq8">-19996.8 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-b-3.zip">Veh-b-3</td>
+    <td class="tg-9wq8"><a href="../models/Veh-b-3.zip">Veh-b-3</a></td>
     <td class="tg-9wq8">53 </td>
     <td class="tg-9wq8">89 </td>
     <td class="tg-uzvj">96 </td>
@@ -320,7 +324,7 @@
     <td class="tg-9wq8">-29981.4 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-b-5.zip">Veh-b-5</td>
+    <td class="tg-9wq8"><a href="../models/Veh-b-5.zip">Veh-b-5</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">61 </td>
     <td class="tg-uzvj">91 </td>
@@ -336,7 +340,7 @@
     <td class="tg-9wq8">-49990.4 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-c-1.zip">Veh-c-1</td>
+    <td class="tg-9wq8"><a href="../models/Veh-c-1.zip">Veh-c-1</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
@@ -352,7 +356,7 @@
     <td class="tg-9wq8">-9996.8 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-c-2.zip">Veh-c-2</td>
+    <td class="tg-9wq8"><a href="../models/Veh-c-2.zip">Veh-c-2</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
@@ -368,7 +372,7 @@
     <td class="tg-9wq8">-19987.8 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-c-3.zip">Veh-c-3</td>
+    <td class="tg-9wq8"><a href="../models/Veh-c-3.zip">Veh-c-3</a></td>
     <td class="tg-9wq8">45 </td>
     <td class="tg-9wq8">95 </td>
     <td class="tg-uzvj">99 </td>
@@ -384,7 +388,7 @@
     <td class="tg-9wq8">-29987.3 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Veh-c-5.zip">Veh-c-5</td>
+    <td class="tg-9wq8"><a href="../models/Veh-c-5.zip">Veh-c-5</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">76 </td>
     <td class="tg-uzvj">83 </td>
@@ -400,7 +404,7 @@
     <td class="tg-9wq8">-49984.4 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Drone-1.zip">Drone-1</td>
+    <td class="tg-9wq8"><a href="../models/Drone-1.zip">Drone-1</a></td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
     <td class="tg-uzvj">100 </td>
@@ -416,7 +420,7 @@
     <td class="tg-9wq8">-9985.9 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Drone-2.zip">Drone-2</td>
+    <td class="tg-9wq8"><a href="../models/Drone-2.zip">Drone-2</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">59 </td>
     <td class="tg-uzvj">63 </td>
@@ -432,7 +436,7 @@
     <td class="tg-9wq8">-19976.6 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Drone-3.zip">Drone-3</td>
+    <td class="tg-9wq8"><a href="../models/Drone-3.zip">Drone-3</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">24 </td>
     <td class="tg-uzvj">35 </td>
@@ -448,7 +452,7 @@
     <td class="tg-9wq8">-29985.1 </td>
   </tr>
   <tr>
-    <td class="tg-9wq8"><a href="../models/Drone-5.zip">Drone-5</td>
+    <td class="tg-9wq8"><a href="../models/Drone-5.zip">Drone-5</a></td>
     <td class="tg-9wq8">0 </td>
     <td class="tg-9wq8">18 </td>
     <td class="tg-uzvj">27 </td>
@@ -464,7 +468,12 @@
     <td class="tg-9wq8">-49940.3 </td>
   </tr>
 </tbody>
-</table></div>
+</table>
+<h2 id="video-result-on-robotic-arm-testbed">Video result on robotic arm testbed</h2>
+<h3 id="scenario-1-collision-occurs-with-usual-control">Scenario 1:  Collision occurs with usual control</h3>
+<p><div class="video-container"><iframe src="videos/collision.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<h3 id="scenario-2-ped-helps-avoid-collision">Scenario 2: PED helps avoid collision</h3>
+<p><div class="video-container"><iframe src="videos/no%20collision.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p></div></div>
             </div>
         </div>
 
@@ -477,29 +486,8 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -545,5 +533,5 @@
 
 <!--
 MkDocs version : 1.4.2
-Build Date UTC : 2023-01-20 03:33:45.943791+00:00
+Build Date UTC : 2023-05-04 09:41:59.834293+00:00
 -->
